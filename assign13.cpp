@@ -36,6 +36,38 @@ void remove_extra_space(string &str)
         }   
     }
 }
+vector<string> split_string(string str)
+{    /// first we will split all the string;
+    vector<string> temp;
+    string s1;
+    for(auto s:str)
+    {
+        if(s!=' ')
+          s1.push_back(s);
+        else
+        {
+            temp.push_back(s1);
+            s1.clear();
+        }  
+    }
+    temp.push_back(s1);
+    return temp;
+}
+void Reverse_word(string &str)
+{
+    vector<string> temp;
+    temp=split_string(str);
+    str.clear();
+    vector<string>::reverse_iterator it;
+    it=temp.rbegin();
+    str=*it;
+    for(it++;it!=temp.rend();it++)
+    {
+        str+=" ";
+        str+=*it;
+    }
+}
+
 int main()
 {
     int i=count_world("saurabh is a good boys");
