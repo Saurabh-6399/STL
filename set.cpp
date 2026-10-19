@@ -33,9 +33,11 @@ int main()
     for(auto e:un1)
        cout<<e<<" ";
     cout<<endl; 
+
     unordered_set<int>::iterator it;
-    for(it=un1.begin();it!=un1.end();it++)
+    for(it=s1.begin();it!=s1.end();it++)
         cout<<*it<<" ";
+    cout<<endl;
     cout<<endl;
 
 }
